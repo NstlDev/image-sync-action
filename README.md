@@ -1,6 +1,7 @@
 # Image Sync Action
 
 - Use [image-syncer](https://github.com/AliyunContainerService/image-syncer) to sync images between docker registries.
+- forked from [hhyasdf/image-sync-action](https://github.com/hhyasdf/image-sync-action)
 
 ## How to use
 
