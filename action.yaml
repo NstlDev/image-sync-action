@@ -1,4 +1,4 @@
-name: "Image Sync Action"
+name: "NstlDev Image Sync Action"
 description: "Automatically sync conatiner images between registries through Github Action"
 inputs:
   version:
