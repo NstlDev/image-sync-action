@@ -26,6 +26,10 @@ inputs:
     description: "The --retries parameter of image-syncer, times to retry failed task (default 2)"
     default: 2
     required: false
+  append_script:
+    description: "The Customize script parameters, append script to the end of the command"
+    default: ""
+    required: false
 runs:
   using: "composite"
   steps:
@@ -33,5 +37,5 @@ runs:
       run: ${{ github.action_path }}/download.sh ${{ inputs.version }}
       shell: bash
     - id: execute
-      run: ./image-syncer --auth=${{ inputs.auth_file }} --images=${{ inputs.images_file }} --arch=${{ inputs.arch }} --os=${{ inputs.os }} --proc=${{ inputs.proc }} --retries=${{ inputs.retries }}
+      run: ./image-syncer --auth=${{ inputs.auth_file }} --images=${{ inputs.images_file }} --arch=${{ inputs.arch }} --os=${{ inputs.os }} --proc=${{ inputs.proc }} --retries=${{ inputs.retries }} ${{ inputs.append_script }}
       shell: bash
