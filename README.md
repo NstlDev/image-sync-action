@@ -10,7 +10,7 @@
 ```yaml
 - name: Checkout
   uses: actions/checkout@v3
-- uses: NstlDev/image-sync-action@latest
+- uses: n-devops/image-sync-action@latest
   with:
     auth_file: ./auth.yaml # The auth information file of registries, optional.
     images_file: ./images.yaml # The images file descirbes which images need to sync, always needed.
